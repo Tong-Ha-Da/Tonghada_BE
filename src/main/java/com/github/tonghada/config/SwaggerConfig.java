@@ -21,7 +21,7 @@ public class SwaggerConfig {
 //                .securityContexts(Arrays.asList(securityContext()))
 //                .securitySchemes(Arrays.asList(apiKey()))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.github.handsonus.controller")) // //  Swagger API 문서로 만들기 원하는 BasePackage 경로. (필수)
+                .apis(RequestHandlerSelectors.basePackage("com.github.tonghada.controller")) // //  Swagger API 문서로 만들기 원하는 BasePackage 경로. (필수)
                 .paths(PathSelectors.any()) // URL 경로를 지정하여 해당 URL에 해당하는 요청만 Swagger API 문서로 만든다. (any()로 설정 시 모든 api가 보여짐, (필수))
                 .build()
                 .apiInfo(apiInfo()) // Swagger API 문서에 대한 설명을 표기하는 메소드. (선택)
@@ -32,8 +32,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Hands On Us")
-                .description("HandsOnUs API 리스트입니다.")
+                .title("통하다")
+                .description("TongHaDa API 리스트입니다.")
                 .version("1.0")
                 .build();
     }

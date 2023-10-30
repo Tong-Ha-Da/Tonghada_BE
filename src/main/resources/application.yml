@@ -24,11 +24,11 @@ spring:
   devtools:
     livereload:
       enabled: true
-#  servlet:
-#    multipart:
-#      enabled: true
-#      max-request-size: 30MB
-#      max-file-size: 10MB
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 30MB
+      max-file-size: 10MB
 logging:
   config: classpath:logback.xml
   level:
@@ -43,3 +43,14 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
 secret-key-source: ${SECRET_KEY_SOURCE}
+
+#s3
+cloud:
+  aws:
+    s3:
+      bucket: ENC(MR80fGoFRJt5mAnWCmyq2NEWPD8odMbj)
+    stack.auto: false
+    region.static: ap-northeast-2
+    credentials:
+      accessKey: ENC(+dXXyOd6svbjnApTPTjTdSDda1fpfj3GTwdICPbeUFI=)
+      secretKey: ENC(MdVnCB6BLgiJmM8rFbUOnzC84vUUxzsgGlk7wNQ3QEleH43q3zSUU55pN6jjY9ufuM1mSI4kXbg=)
