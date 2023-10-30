@@ -1,1 +1,10 @@
 
+
+
+
+
+#jasypt
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+secret-key-source: ${SECRET_KEY_SOURCE}
