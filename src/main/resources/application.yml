@@ -1,6 +1,41 @@
-
-
-
+spring:
+  jpa:
+    generate-ddl: 'false'
+    database: mysql
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        use_sql_comments: true
+        format_sql: true
+        show_sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  thymeleaf:
+    cache: false
+  datasource:
+    url: ENC(8YsNpfLGxUnlcd+UPZhrXY50skga/Tk7uaWVS4GWhBjglWsDcMIGWHydqKQR8UeeNp91T2hVjTYh+SMIdlGMYJ/lRtDzNlo23SqvmGNHPAX07o6P5r3dxfsDY7o+FcTj)
+    password: ENC(OnhqbvarZH8+RzPLIhsZ5cDqhOdEm39Y)
+    username: ENC(A6pFpXv0njyUoLTndXqpWA==)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  devtools:
+    livereload:
+      enabled: true
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-request-size: 30MB
+#      max-file-size: 10MB
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
 
 
 #jasypt
